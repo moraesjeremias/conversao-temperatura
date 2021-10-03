@@ -1,0 +1,13 @@
+replicaCount: 1
+
+image:
+  repository: moraesjeremias/ini-k8s-temperature-api
+  pullPolicy: IfNotPresent
+  tag: "v1"
+
+
+service:
+  type: NodePort
+  port: 8080
+  targetPort: 8080
+  nodePort: 30001
